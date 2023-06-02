@@ -1,0 +1,23 @@
+{
+  "employee": [
+    {
+      "name": "sunil Kumar",
+      "email": "bosianil@gmail.com",
+      "phone": "7893083018",
+      "password": "123123",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Anil",
+      "email": "bosianils143@gmail.com",
+      "phone": "7893083018"
+    },
+    {
+      "name": "Harish Kumar",
+      "email": "HarishKing08@gmail.com",
+      "phone": "7392743824",
+      "id": 3
+    }
+  ]
+}

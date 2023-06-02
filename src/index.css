@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* font-size: 16px; */
+}
+
+html {
+  /* font-size: 62.5%; */
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+.logo {
+  /* text-decoration: none; */
+  font-size: 2rem;
+  /* background-color: aquamarine; */
+  grid-column: 2/3;
+  display: grid;
+  background: linear-gradient(to right, red, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 7rem;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+}
+
+.menu-link {
+  font-size: 1rem;
+  grid-column: 3/4;
+}
+
+
+.menu-link ul {
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-nav {
+  width: 100% !important;
+  height: 3.5rem;
+  background-color: white;
+  top: 0;
+  z-index: 5;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 10rem 1fr 2fr 1fr 10rem;
+}
+
+.social-media {
+  grid-column: 4/5;
+}
+
+.social-media ul {
+  height: 3.5rem;
+  display: grid;
+  grid-template-columns: 3fr repeat(3, 1fr);
+  justify-content: space-around;
+  text-align: right;
+  align-items: center;
+}
+
+.social-media ul li:first-child {
+  grid-column: 2/3;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 25vh;
+  align-items: center;
+}
+
+@keyframes FromRightSide {
+  from {
+    transform: translateX(-500px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.mobile_view_list {
+  animation-name: FromRightSide;
+  animation-timing-function: ease-in;
+  animation-delay: .6s;
+  /* animation-duration: ; */
+  animation-direction: normal;
+  animation-duration: .6s ease;
+  animation-iteration-count: 1;
+
+  margin: 4.5rem 0rem;
+  width: 100%;
+  background-color: rgb(211, 167, 167);
+  top: 0;
+  position: fixed;
+  text-transform: uppercase;
+  justify-content: start;
+  align-items: center;
+}
+
+.mobile_view_list>li {
+  border-bottom: 1px solid lightgray;
+  padding: 1rem 2rem;
+  align-items: center;
+  text-align: left;
+  color: black;
+}
+
+.dropdown_list>li {
+  padding-top: 1rem;
+  padding: .8rem 3rem;
+  text-align: left;
+  text-transform: capitalize;
+  align-items: center;
+  background-color: beige;
+  border-bottom: 1px solid rgb(85, 85, 85);
+}
+
+h1 {
+  background: linear-gradient(to right, red, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1080px) {
+  .main-nav {
+    height: 3rem;
+    grid-template-columns: 2rem 3fr 3fr 1fr 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  }
+
+  .logo,
+  .menu-link ul,
+  .social-media ul {
+    height: 3.5rem;
+  }
+}
+
+.hamburger-menu {
+  display: grid;
+  text-align: right;
+  justify-content: end;
+  grid-template-columns: 2fr 2rem;
+  grid-column: 5/5;
+  font-size: 1.5rem;
+  position: relative;
+  /* bottom : 15px; */
+  align-items: center;
+}
+
+@media (min-width: 998px) {
+
+  .sideBar {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .mobile-version {
+    display: none;
+  }
+}
+
+@media (max-width: 998px) {
+  .main-nav {
+    height: 4.5rem;
+    grid-template-columns: 2rem 2fr 3fr 2rem 2rem;
+
+  }
+
+  .menu-link {
+    display: none;
+  }
+
+  .social-media {
+    display: none;
+  }
+
+  .mobile-version {
+    display: grid;
+    grid-template-columns: 2rem 5fr 1fr 2rem;
+    width: 90vw;
+    grid-column: 3/4;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; */
+    margin: 0rem 2rem;
+    position: absolute;
+    background: lightblue;
+    /* text-decoration: underline; */
+    font-weight: 550;
+    /* color: bisque !important; */
+    line-height: 2.5rem;
+    height: 10rem;
+  }
+}
+
+.mobile-version ul {
+  grid-column: 2/3;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; */
+}
+
+
+
+
+.btn {
+  margin: 5px;
+}
